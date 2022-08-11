@@ -36,7 +36,28 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Text("Row 1 - Item 1,"),
+              SizedBox(width: 20),
+              Text("Row 1 - Item 2"),
+            ],
+          ),
+          const SizedBox(width: double.infinity, height: 100),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Text("Row 2 - Item 1,"),
+              SizedBox(width: 20),
+              Text("Row 2 - Item 2"),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
